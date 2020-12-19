@@ -9,9 +9,9 @@ import {UserContext} from '../Context/User';
 import SearchBar from '~/Components/SearchBar';
 import Loading from '../Components/Loading';
 
-import Login from '~/Screens/Login';
-import PasswordReset from '~/Screens/PasswordReset';
-import Signup from '~/Screens/Signup';
+import Login from '../Screen/Login';
+import PasswordReset from '../Screen/PasswordReset';
+import Signup from '../Screen/Signup';
 
 import MyFeed from '~/Screens/MyFeed';
 import Feeds from '~/Screens/Feeds';
