@@ -5,9 +5,9 @@ import {createStackNavigator} from '@react-navigation/stack';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
-import {UserContext} from '~/Context/User';
+import {UserContext} from '../Context/User';
 import SearchBar from '~/Components/SearchBar';
-import Loading from '~/Components/Loading';
+import Loading from '../Components/Loading';
 
 import Login from '~/Screens/Login';
 import PasswordReset from '~/Screens/PasswordReset';
@@ -105,8 +105,8 @@ const MainTabs = () => {
             <Image
               source={
                 focused
-                  ? require('~/Assets/Images/Tabs/ic_home.png')
-                  : require('~/Assets/Images/Tabs/ic_home_outline.png')
+                  ? require('../Assets/Images/ic_home.png')
+                  : require('../Assets/Images/ic_home_outline.png')
               }
             />
           ),
@@ -120,8 +120,8 @@ const MainTabs = () => {
             <Image
               source={
                 focused
-                  ? require('~/Assets/Images/Tabs/ic_search.png')
-                  : require('~/Assets/Images/Tabs/ic_search_outline.png')
+                  ? require('../Assets/Images/ic_search.png')
+                  : require('../Assets/Images/ic_search_outline.png')
               }
             />
           ),
@@ -136,8 +136,8 @@ const MainTabs = () => {
             <Image
               source={
                 focused
-                  ? require('~/Assets/Images/Tabs/ic_add.png')
-                  : require('~/Assets/Images/Tabs/ic_add_outline.png')
+                  ? require('../Assets/Images/ic_add.png')
+                  : require('../Assets/Images/ic_add_outline.png')
               }
             />
           ),
@@ -151,8 +151,8 @@ const MainTabs = () => {
             <Image
               source={
                 focused
-                  ? require('~/Assets/Images/Tabs/ic_favorite.png')
-                  : require('~/Assets/Images/Tabs/ic_favorite_outline.png')
+                  ? require('../Assets/Images/ic_favorite.png')
+                  : require('../Assets/Images/ic_favorite_outline.png')
               }
             />
           ),
@@ -166,8 +166,8 @@ const MainTabs = () => {
             <Image
               source={
                 focused
-                  ? require('~/Assets/Images/Tabs/ic_profile.png')
-                  : require('~/Assets/Images/Tabs/ic_profile_outline.png')
+                  ? require('../Assets/Images/ic_profile.png')
+                  : require('../Assets/Images/ic_profile_outline.png')
               }
             />
           ),

@@ -10,6 +10,9 @@ import {
 } from 'react-native/Libraries/NewAppScreen';
 
 import Styled from 'styled-components/native';
+import Navigator from '../Screen/Navigator';
+import { UserContextProvider } from '../Context/User';
+import {RandomUserDataProvider} from '../Context/RandomUserData';
 
 const ScrollView = Styled.ScrollView`
   background-color: ${Colors.lighter};
@@ -39,42 +42,13 @@ interface Props {}
 
 const App = ({  }: Props) => {
   return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView contentInsetAdjustmentBehavior="automatic">
-          <Header />
-          <Body>
-            <SectionContainer>
-              <SectionDescription>Step One</SectionDescription>
-              <SectionDescription>
-                Edit <HighLight>App.js</HighLight> to change this screen and
-                then come back to see your edits.
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>See Your Changes</SectionDescription>
-              <SectionDescription>
-                <ReloadInstructions />
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>Debug</SectionDescription>
-              <SectionDescription>
-                <DebugInstructions />
-              </SectionDescription>
-            </SectionContainer>
-            <SectionContainer>
-              <SectionDescription>Learn More</SectionDescription>
-              <SectionDescription>
-                Read the docs to discover what to do next:
-              </SectionDescription>
-            </SectionContainer>
-            <LearnMoreLinks />
-          </Body>
-        </ScrollView>
-      </SafeAreaView>
-    </Fragment>
+    <RandomUserDataProvider cache={true}>
+      <UserContextProvider>
+        <StatusBar barStyle="default">
+          <Navigator />
+        </StatusBar>
+      </UserContextProvider>
+    </RandomUserDataProvider>
   );
 };
 
