@@ -6,15 +6,15 @@ import {createDrawerNavigator} from '@react-navigation/drawer';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 import {UserContext} from '../Context/User';
-import SearchBar from '~/Components/SearchBar';
+import SearchBar from '../Components/SearchBar';
 import Loading from '../Components/Loading';
 
 import Login from '../Screen/Login';
 import PasswordReset from '../Screen/PasswordReset';
 import Signup from '../Screen/Signup';
 
-import MyFeed from '~/Screens/MyFeed';
-import Feeds from '~/Screens/Feeds';
+import MyFeed from '../Screen/MyFeed';
+import Feeds from '../Screen/Feeds';
 import FeedListOnly from '~/Screens/FeedListOnly';
 import Upload from '~/Screens/Upload';
 import Notification from '~/Screens/Notification';
