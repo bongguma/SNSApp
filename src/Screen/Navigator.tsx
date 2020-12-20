@@ -17,8 +17,8 @@ import MyFeed from '../Screen/MyFeed';
 import Feeds from '../Screen/Feeds';
 import FeedListOnly from '../Screen/FeedListOnly';
 import Upload from '../Screen/Upload';
-import Notification from '~/Screens/Notification';
-import Profile from '~/Screens/Profile';
+import Notification from '../Screen/Notification';
+import Profile from '../Screen/Profile';
 import CustomDrawer from '~/Screens/Drawer';
 
 const Stack = createStackNavigator();
