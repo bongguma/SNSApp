@@ -61,7 +61,7 @@ import {StatusBar} from 'react-native';
 
 import Navigator from '../Screen/Navigator';
 import {UserContextProvider} from '../Context/User';
-import {RandomUserDataProvider} from '~/Context/RandomUserData';
+import {RandomUserDataProvider} from '..//Context/RandomUserData';
 
 interface Props {}
 

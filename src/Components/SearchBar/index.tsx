@@ -1,8 +1,8 @@
 import React from 'react';
 import Styled from 'styled-components/native';
 
-import IconButton from '../IconButton';
-import Input from '../Input';
+import IconButton from '~/Components/IconButton';
+import Input from '~/Components/Input';
 
 const Container = Styled.SafeAreaView`
   flex: 1;

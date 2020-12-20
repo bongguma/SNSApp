@@ -14,5 +14,5 @@ type FeedsTabParamList = {
 }
 
 type ProfileTabParamList = {
-    profile: undefined;
+    Profile: undefined;
 }
