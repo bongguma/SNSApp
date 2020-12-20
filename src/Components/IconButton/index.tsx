@@ -16,7 +16,7 @@ interface Props {
 
 const IconButton = ({ iconName, style, onPress }: Props) => {
     const imageSource = {
-      camera: require('../../Assets/Images/ic_camra.png'),
+      camera: require('../../Assets/Images/ic_camera.png'),
       live: require('../../Assets/Images/ic_live.png'),
       send: require('../../Assets/Images/ic_send.png'),
       dotMenu: require('../../Assets/Images/ic_dot_menu.png'),

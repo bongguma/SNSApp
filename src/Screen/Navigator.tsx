@@ -19,7 +19,7 @@ import FeedListOnly from '../Screen/FeedListOnly';
 import Upload from '../Screen/Upload';
 import Notification from '../Screen/Notification';
 import Profile from '../Screen/Profile';
-import CustomDrawer from '~/Screens/Drawer';
+import CustomDrawer from '../Screen/Drawer';
 
 const Stack = createStackNavigator();
 const BottomTab = createBottomTabNavigator();
