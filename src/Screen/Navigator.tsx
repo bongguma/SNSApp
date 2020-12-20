@@ -15,8 +15,8 @@ import Signup from '../Screen/Signup';
 
 import MyFeed from '../Screen/MyFeed';
 import Feeds from '../Screen/Feeds';
-import FeedListOnly from '~/Screens/FeedListOnly';
-import Upload from '~/Screens/Upload';
+import FeedListOnly from '../Screen/FeedListOnly';
+import Upload from '../Screen/Upload';
 import Notification from '~/Screens/Notification';
 import Profile from '~/Screens/Profile';
 import CustomDrawer from '~/Screens/Drawer';
