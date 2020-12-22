@@ -53,9 +53,10 @@ const FeedsTab = () => {
       <Stack.Screen
         name="Feeds"
         component={Feeds}
-        options={{
-          header: () => <SearchBar />,
-        }}
+        // 서치바 UI 이상
+        // options={{
+        //   header: () => <SearchBar />,
+        // }}
       />
       <Stack.Screen
         name="FeedListOnly"

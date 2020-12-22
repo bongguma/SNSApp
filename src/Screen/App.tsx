@@ -67,6 +67,8 @@ interface Props {}
 
 const App = ({}: Props) => {
   return (
+    // RandomUserDataProvider의 cache는 false 설정 시, 매번 API를 통해 새로운 데이터를 가져오게 된다.
+    // true 일 시, 한번 가져온 데이터를 저장하여 사용하도록 구현한다.
     <RandomUserDataProvider cache={true}>
       <UserContextProvider>
         <StatusBar barStyle="default" />

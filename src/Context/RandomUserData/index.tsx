@@ -24,6 +24,8 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
   const [descriptionList, setDescriptionList] = useState<Array<string>>([]);
   const [imageList, setImageList] = useState<Array<string>>([]);
 
+  // cache가 false로 설정되었거나 캐싱한 데이터가 없을 경우, 새롭게 Fetch API를 통해 데이터를 가져온다.
+  // getCacheData 함수는 캐싱여부 및 캐시 데이터 존재 여부를 확인할 수 있는 함수 
   const getCacheData = async (key: string) => {
     const cacheData = await AsyncStorage.getItem(key);
     if (cache === false || cacheData === null) {
