@@ -19,6 +19,7 @@ const RandomUserDataContext = createContext<IRnadomUserData>({
   },
 });
 
+
 const RandomUserDataProvider = ({cache, children}: Props) => {
   const [userList, setUserList] = useState<Array<IUserProfile>>([]);
   const [descriptionList, setDescriptionList] = useState<Array<string>>([]);
@@ -44,6 +45,7 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
     AsyncStorage.setItem(key, JSON.stringify(data));
   };
 
+  // 유저 정보
   const setUsers = async () => {
     const cachedData = await getCacheData('UserList');
     if (cachedData) {
@@ -63,6 +65,7 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
     }
   };
 
+  // 피드 설명
   const setDescriptions = async () => {
     const cachedData = await getCacheData('DescriptionList');
     console.log(cachedData);
@@ -89,12 +92,14 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
     }
   };
 
+  // 피드 이미지
   const setImages = async () => {
     const cachedData = await getCacheData('ImageList');
     if (cachedData) {
       if (Image.queryCache) {
         Image.queryCache(cachedData);
         cachedData.map((data: string) => {
+          // 이미지 캐시에서 다운로드
           Image.prefetch(data);
         });
       }
@@ -140,6 +145,9 @@ const RandomUserDataProvider = ({cache, children}: Props) => {
 
     return images;
   };
+
+  // 사용자가 업로드한 피드를 랜덤하게 가져오는 함수
+  //하나의 피드에 대한 유저이름 유저프로필사진 그리고 설명 피드 이미지 리스트까지 가져온다. 
   const getMyFeed = (number: number = 10): Array<IFeed> => {
     let feeds: Array<IFeed> = [];
     for (let i = 0; i < number; i++) {
