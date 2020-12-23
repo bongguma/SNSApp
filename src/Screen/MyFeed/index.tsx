@@ -58,11 +58,14 @@ const MyFeed = ({navigation}: Props) => {
               setLoading(false);
             }, 2000);
           }}
+          // onEndReached - 스크롤이 목록 하단에 도달 시, 수행되는 작업
           onEndReached={() => {
             setFeedList([...feedList, ...getMyFeed()]);
           }}
+          // onEndReachedThreshold - 목록 마지막 아이템이 어디 높이에 도달했을 때 onEndReached 수행되어야하는 작업이 수행될 것인지 지정
           onEndReachedThreshold={0.5}
           refreshing={loading}
+          // ListHeaderComponent - 데이터를 받아와서 출력하는 곳 위에 보여주는 것
           ListHeaderComponent={<StoryList storyList={storyList} />}
           renderItem={({item, index}) => (
             <Feed

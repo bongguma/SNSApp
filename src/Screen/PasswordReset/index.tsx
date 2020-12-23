@@ -76,6 +76,7 @@ const PasswordReset = ({navigation}: Props) => {
         </LockImageContainer>
         <Title>로그인에 문제가 있나요?</Title>
         <Description>{tabDescriptions[tabIndex]}</Description>
+        {/*  tabs 리스트를 map 시켜서 string과 index를 뽑아온다. (for 개념 느낌) */}
         <TabContainer>
           {tabs.map((label: string, index: number) => (
             <Tab
