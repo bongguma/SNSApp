@@ -37,6 +37,7 @@ const StoryList = ({ storyList }: Props) => {
         <FlatList
             data={storyList}
             horizontal={true}
+            // 세로 스크롤바가 보이는지에 대한 여부
             showsVerticalScrollIndicator={false}
             keyExtractor={(item, index) => {
                 return `story-${index}`;
